@@ -1,0 +1,24 @@
+
+name: Mimir GitHub Actions Example
+run-name: Mimir GitHub Actions Example - ${{ github.workflow }}
+on:
+  - push
+
+jobs:
+  sanity-check:
+    runs-on: debian-latest
+    container:
+      image: pergamos/podman:trixie
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Initialize Gaia
+        run: |
+          apt-get update && apt-get install -y git
+          git clone https://github.com/gaiaBuildSystem/gaia.git
+          ./gaia/init
+
+      - name: Run Mimir Tests
+        run: |
+          ./gaia/mimir-cli build deimos for qemu x86 but only for environment check, do not run the full build

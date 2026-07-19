@@ -13,7 +13,7 @@ This repo is an example of how to use Mimir to create a new Gaia build system pr
 To initialize a new Gaia project, you can use the following command:
 
 ```
-wget -qO- https://raw.githubusercontent.com/gaiaBuildSystem/mimir-init/refs/heads/main/init | bash
+wget -qO init https://raw.githubusercontent.com/gaiaBuildSystem/mimir-init/refs/heads/main/init && bash init
 ```
 
 This will check if the environment has the required dependencies installed:
