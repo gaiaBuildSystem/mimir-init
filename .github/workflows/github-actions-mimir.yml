@@ -15,7 +15,7 @@ jobs:
 
       - name: Initialize Gaia
         run: |
-          apt-get update && apt-get install -y git
+          apt-get update && apt-get install -y git sudo
           git clone https://github.com/gaiaBuildSystem/gaia.git
           cd ./gaia
           ./init
