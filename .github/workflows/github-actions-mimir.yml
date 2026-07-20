@@ -19,6 +19,8 @@ jobs:
           git clone https://github.com/gaiaBuildSystem/gaia.git
           cd ./gaia
           ./init
+          # make sure deno is under /usr/bin
+          ln -s /root/.deno/bin/deno /usr/bin/deno
 
       - name: Run Mimir Tests
         run: |
