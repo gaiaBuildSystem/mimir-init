@@ -27,5 +27,5 @@ jobs:
       - name: Run Mimir Tests
         run: |
           ./gaia/mimir-cli \
-            build deimos for qemu x86 but only for environment check \
+            build deimos for qemu x86, but only for check the env, \
             do not run the full build
